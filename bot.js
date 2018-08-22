@@ -332,23 +332,15 @@ coll.first().delete()
   }
 })
 
-client.on('ready', function(){
-  client.user.setStatus("dnd");
-    var ms = 40000 ;	
-    var setGame = ['!inv','!help'];	
-    var i = -1;	
-    var j = 0;	
-    setInterval(function (){	
-        if( i == -1 ){	
-j = 1;	
-       }	
-        if( i == (setGame.length)-1 ){	
-            j = -1;	
-      }	
-       i = i+j;	
-        client.user.setGame(setGame[i],`http://www.youtube.com/gg`);	
-}, ms);	
-	
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : i1Suhaib`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`$help||$inv`,"http://twitch.tv/S-F")
+client.user.setStatus("dnd")
 });
 
 client.on('message' , message => {
@@ -1209,7 +1201,7 @@ message.react("❌")
 
  client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='!count')
+      if(message.content =='$count')
       var IzRo = new Discord.RichEmbed()
       .setThumbnail(message.author.avatarURL)
       .setFooter(message.author.username, message.author.avatarURL)
