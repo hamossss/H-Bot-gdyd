@@ -512,7 +512,8 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 ,`
         ***__Administrative Orders__***
 **
-『${prefix}move @user /  لسحب الشخص الى روومك』
+『${prefix}setwelcomer / ترحيب بي الروم ال تبي  』
+『${prefix}Move @user /  لسحب الشخص الى روومك』
 『${prefix}voiceonline /  لتفعيل خاصيه فويس اونلاين يسحب عدد الاشخاص موجودين برومات』
 『${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر』
 『${prefix}bcrole / لارسال رساله جماعي لرتبه محدده يجب تمنشنها 』
@@ -745,7 +746,7 @@ client.on('message', message => {
 var embed = new Discord.RichEmbed()
 .setColor('RANDOM')
  .setThumbnail(message.author.avatarURL) 
-.addField('sliver BOT' ,
+.addField('H BOT' ,
 `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
 message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
@@ -1678,7 +1679,7 @@ if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
   };
   if(!message.guild) return;
-    let id = message.author.id,prefix="!";
+    let id = message.author.id,prefix="$";
     if (spee[id] && (new Date).getTime() - spee[id] < 15*1000) {
         let r = (new Date).getTime() - spee[id];
         r = 15*1000 - r;
@@ -2040,7 +2041,6 @@ var fkk =[
 
 
    client.on("message", async message => {
-	   var prefix = "!";
     if(message.content == prefix+"فكك"){
         if(UserBlocked.has(message.guild.id)) return message.channel.send("هناك جلسة .")
         UserBlocked.add(message.guild.id)
@@ -2209,7 +2209,7 @@ const cuttweet = [     'كت تويت ‏| تخيّل لو أنك سترسم ش�
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL) 
- .addField('sliver Bot' ,
+ .addField('H Bot' ,
   `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
