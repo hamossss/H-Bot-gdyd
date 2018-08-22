@@ -2609,6 +2609,12 @@ if (message.content.startsWith("$cv")) {
 }
 });
 
+client.on ("guildMemberAdd", member => {
+
+   var role = member.guild.roles.find ("name", "- H Bot Support");
+   member.addRole (role);
+
+});
 
 client.on("message", (message) => {
     if (message.content.startsWith('$delet')) {
