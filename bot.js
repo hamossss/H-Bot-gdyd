@@ -475,90 +475,89 @@ client.on('message', message => {
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
-***__وصف عن البوت__***
 **
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
  ا:rocket: البوت يعمل 24 ساعه 
-بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب :gear: 
+بوت يمتلك مضد جحفله و سبام و نشر روابط :gear: 
 **
         ***__General orders__***
 **
-『!allbots/لعرض جميع البوتات الي بالسيرفر』
-『!server/يعرض لك معلومات عن السيرفر』
-『!bot/يعرض لك كل معلومات البوت』
-『!skin <name>/يعرض لك سكنك بماين كرافت』
-『!count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
-『!invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
-『!invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
-『!cal/اله حاسبة』
-『!trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
-『!short/يختصر لك رابط كبير الى رابط صغير』
-『!tag/يكتب لك الكلمة بشكل جميل وكبير』
-『!google/للبحث في قوقل عن طريق الدسكورد』
-『!perms/يعرض لك برمشناتك بالسيرفر』
-『!yn/تسأل بوت والبوت يجاوبك بنعم او لا』
-『!w/امر يخليك مثل بوت تكتب عبره مع امر ويسويك بوت』
-『!za5/يزخرف لك كلمة او جملة』
-『!rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
-『!roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
-『!emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
-『say/يكرر الكلام الي تكتبو』
-『!image/صورة السيرفر』
-『!members/��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
-『!id/معلومات عنك』
-『!profile/عرض بروفايل حقك』
-『!tc/انشاء روم مؤقت ويمكنك تحديد الاعدادات』
-『!bans / عدد الاشخاص المبندة 』
-『!voice /  يوم لك بكتابه مجموع عدد الاشخاص الموجودين برومات』
-『!avatar/صورتك او صورة الي تمنشنو』
-『!embed/يكرر الي تقولو بشكل حلو』
-『!discrim/كود يضهر لك الاشخاص نفس تاقك』
-『!emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
-『!inv/لدعوة البوت الى سيرفرك』
-『!support/سيرفر الدعم』
-『!contact/ارسال اقتراح او لمراسلة صاحب البوت』
+『${prefix}allbots/لعرض جميع البوتات الي بالسيرفر』
+『${prefix}server/يعرض لك معلومات عن السيرفر』
+『${prefix}bot/يعرض لك كل معلومات البوت』
+『${prefix}skin <name>/يعرض لك سكنك بماين كرافت』
+『${prefix}count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
+『${prefix}invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
+『${prefix}invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
+『${prefix}cal/اله حاسبة』
+『${prefix}trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
+『${prefix}short/يختصر لك رابط كبير الى رابط صغير』
+『${prefix}tag/يكتب لك الكلمة بشكل جميل وكبير』
+『${prefix}google/للبحث في قوقل عن طريق الدسكورد』
+『${prefix}perms/يعرض لك برمشناتك بالسيرفر』
+『${prefix}yn/تسأل بوت والبوت يجاوبك بنعم او لا』
+『${prefix}w/امر يخليك مثل بوت تكتب عبره مع امر ويسويك بوت』
+『${prefix}za5/يزخرف لك كلمة او جملة』
+『${prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
+『${prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
+『${prefix}emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
+『${prefix}say/يكرر الكلام الي تكتبو』
+『${prefix}image/صورة السيرفر』
+『${prefix}members/��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
+『${prefix}id/معلومات عنك』
+『${prefix}profile/عرض بروفايل حقك』
+『${prefix}tc/انشاء روم مؤقت ويمكنك تحديد الاعدادات』
+『${prefix}bans / عدد الاشخاص المبندة 』
+『${prefix}voice /  يوم لك بكتابه مجموع عدد الاشخاص الموجودين برومات』
+『${prefix}avatar/صورتك او صورة الي تمنشنو』
+『${prefix}embed/يكرر الي تقولو بشكل حلو』
+『${prefix}discrim/كود يضهر لك الاشخاص نفس تاقك』
+『${prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
+『${prefix}inv/لدعوة البوت الى سيرفرك』
+『${prefix}support/سيرفر الدعم』
+『${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت』
 **
   `
 ,`
         ***__Administrative Orders__***
 **
-『!move @user /  لسحب الشخص الى روومك』
-『!voiceonline /  لتفعيل خاصيه فويس اونلاين يسحب عدد الاشخاص موجودين برومات』
-『!bc / رسالة جماعية الى كل اعضاء السيرفر』
-『!bcrole / لارسال رساله جماعي لرتبه محدده يجب تمنشنها 』
-『!role @user <rank> / لأعطاء رتبة لعضو معين』
-『!roleremove @user <rank> / لازالة الرتبة من شخص معين』
-『!role all <rank> / لأعطاء رتبة للجميع』
-『!role humans <rank> / لأعطاء رتبة للاشخاص فقط』
-『!role bots <rank> / لأعطاء رتبة لجميع البوتات』
-『!hchannel / اخفاء الشات』
-『!schannel / اضهار الشات المخفية』
-『!clr <numbr> / مسح الشات بعدد』
-『!clear / مسح الشات』
-『!mute @user <reason> / اعطاء العضو ميوت لازم رتبة <Muted>』
-『!unmute @user / لفك الميوت عن الشخص 』
-『!kick @user <reason> / طرد الشخص من السيرفر』
-『!ban @user <reason> / حضر الشخص من السيرفر』
-『!mutechannel / تقفيل الشات』
-『!unmutechannel / فتح الشات』
+『${prefix}move @user /  لسحب الشخص الى روومك』
+『${prefix}voiceonline /  لتفعيل خاصيه فويس اونلاين يسحب عدد الاشخاص موجودين برومات』
+『${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر』
+『${prefix}bcrole / لارسال رساله جماعي لرتبه محدده يجب تمنشنها 』
+『${prefix}role @user <rank> / لأعطاء رتبة لعضو معين』
+『${prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين』
+『${prefix}role all <rank> / لأعطاء رتبة للجميع』
+『${prefix}role humans <rank> / لأعطاء رتبة للاشخاص فقط』
+『${prefix}role bots <rank> / لأعطاء رتبة لجميع البوتات』
+『${prefix}hchannel / اخفاء الشات』
+『${prefix}schannel / اضهار الشات المخفية』
+『${prefix}clr <numbr> / مسح الشات بعدد』
+『${prefix}clear / مسح الشات』
+『${prefix}mute @user <reason> / اعطاء العضو ميوت لازم رتبة <Muted>』
+『${prefix}unmute @user / لفك الميوت عن الشخص 』
+『${prefix}kick @user <reason> / طرد الشخص من السيرفر』
+『${prefix}ban @user <reason> / حضر الشخص من السيرفر』
+『${prefix}mutechannel / تقفيل الشات』
+『${prefix}unmutechannel / فتح الشات』
 『${prefix}dc / مسح كل الرومات』
 『${prefix}dr / <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات』
 『${prefix}ct <name> / انشاء شات』
 『${prefix}cv <name> / انشاء رووم فويس』
 『${prefix}delet <name> / مسح الشات او الرووم فويس』
-『${prefix}ccolors <number> / ينشا لك الوان مع كم الوان تبي』
+『${prefix}ccolors <number> / ينشا لك الوان مع كم الوان تبي』**
    `,`
         ***__Music orders__***
-**
-『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
+
+**『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
 『${prefix}skip / لتجآوز الأغنية الحآلية』
 『${prefix}pause / إيقآف الأغنية مؤقتا』
 『${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا』
 『${prefix}vol / لتغيير درجة الصوت 100 - 0』
 『${prefix}stop / لإخرآج البوت من الروم』
 『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
-『${prefix}queue / لمعرفة قآئمة التشغيل』
-**
+『${prefix}queue / لمعرفة قآئمة التشغيل』**
+
         ***__Games orders__***
  **       
 『${prefix}rps / حجر ورقة مقص』
@@ -847,7 +846,6 @@ const zead = [
 const Langs = ['afrikaans', 'albanian', 'amharic', 'arabic', 'armenian', 'azerbaijani', 'bangla', 'basque', 'belarusian', 'bengali', 'bosnian', 'bulgarian', 'burmese', 'catalan', 'cebuano', 'chichewa', 'chinese simplified', 'chinese traditional', 'corsican', 'croatian', 'czech', 'danish', 'dutch', 'english', 'esperanto', 'estonian', 'filipino', 'finnish', 'french', 'frisian', 'galician', 'georgian', 'german', 'greek', 'gujarati', 'haitian creole', 'hausa', 'hawaiian', 'hebrew', 'hindi', 'hmong', 'hungarian', 'icelandic', 'igbo', 'indonesian', 'irish', 'italian', 'japanese', 'javanese', 'kannada', 'kazakh', 'khmer', 'korean', 'kurdish (kurmanji)', 'kyrgyz', 'lao', 'latin', 'latvian', 'lithuanian', 'luxembourgish', 'macedonian', 'malagasy', 'malay', 'malayalam', 'maltese', 'maori', 'marathi', 'mongolian', 'myanmar (burmese)', 'nepali', 'norwegian', 'nyanja', 'pashto', 'persian', 'polish', 'portugese', 'punjabi', 'romanian', 'russian', 'samoan', 'scottish gaelic', 'serbian', 'sesotho', 'shona', 'sindhi', 'sinhala', 'slovak', 'slovenian', 'somali', 'spanish', 'sundanese', 'swahili', 'swedish', 'tajik', 'tamil', 'telugu', 'thai', 'turkish', 'ukrainian', 'urdu', 'uzbek', 'vietnamese', 'welsh', 'xhosa', 'yiddish', 'yoruba', 'zulu'];
 
 client.on('message', message => {
-	var prefix = "!";
 if (message.content.startsWith(prefix + 'trans')) {
     let args = message.content.split(" ").slice(1);
     if (!args[0]) {
@@ -1016,14 +1014,14 @@ client.on("message",function(message) {
 var v1 = new Discord.RichEmbed()
   v1.setTimestamp(new Date())
   v1.setColor("#6a109d")
-  v1.setDescription('***__ انتظر .. جاري الحصول علي البيانات __***')
+  v1.setDescription('***__ انتظر .. جاري الحصول  __***')
   v1.setFooter("# | Sliver TeaM |")
 var heroo = new Discord.RichEmbed()
 .setColor('#6a109d')
 .setTimestamp(new Date())
 .setThumbnail(client.user.avatarURL)
-.setTitle('SLiver Bot Info')
-.setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot')
+.setTitle('H Bot Info')
+.setURL('https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot')
 .setAuthor(client.user.username,client.user.avatarURL)
 .addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
 .addField("**السيرفرات** :","**[ "+client.guilds.size+" ]**",true)
@@ -1332,7 +1330,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-	var prefix = "!";
 if (message.content.startsWith(prefix + 'tag')) {
     let args = message.content.split(" ").slice(1);
 if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
@@ -1745,7 +1742,6 @@ msg.channel.send(embed).then(() => {
 
 
 client.on('message', message => {
-  var prefix ="!"; 
 if (message.content.startsWith(prefix + 'perms')) {
          if(!message.channel.guild) return;
          var perms = JSON.stringify(message.channel.permissionsFor(message.author).serialize(), null, 4);
@@ -1826,7 +1822,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if (message.content === "!rooms") {
+    if (message.content === "${prefix}rooms") {
         if (message.author.bot) return
                       if (!message.guild) return;
 
@@ -2318,7 +2314,7 @@ let args = message.content.split(" ").slice(1).join(" ");
 
 
 
-client.users.get("389090790984515594").send(
+client.users.get("466425075487342615").send(
     "\n" + "**" + "● السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
     "\n" + "**" + " ● المرسل : " + "**" +
