@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const devs = ['389090790984515594','350408440566382592'];
+const devs = ['466425075487342615','466425075487342615'];
 var prefix = "$";
 const adminprefix = "$"
 const db = require('quick.db');
@@ -352,7 +352,6 @@ j = 1;
 });
 
 client.on('message' , message => {
-  var prefix = "!";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "bcrole")) {
     let args = message.content.split(" ").slice(1);
@@ -398,7 +397,7 @@ client.on('message' , message => {
   client.on('message', msg => {
     if(msg.author.bot) return;
     
-    if(msg.content === '!sr') {
+    if(msg.content === '$sr') {
       client.guilds.forEach(g => {
         
         let l = g.id
@@ -424,7 +423,7 @@ client.on('message' , message => {
   
 client.on('message', message => {
       if (!devs.includes(message.author.id)) return;
-  if (message.content.startsWith(adminprefix + 'sliver')) {
+  if (message.content.startsWith(adminprefix + 'hbc')) {
     if (!devs.includes(message.author.id)) return; 
 let args = message.content.split(' ').slice(1).join(' ');
 
@@ -437,8 +436,8 @@ m.sendMessage(args)
 client.on('ebnklb',function(ebnklb) {
     
     if(ebnklb.content.startsWith(`<@${client.user.id}>`)) {
-        ebnklb.channel.send('Hey Im **Sliver bot !**  A Nice Bot Developed By:`MHSTR`')
-        ebnklb.channel.send('My Prefix `!`')
+        ebnklb.channel.send('Hey Im **- H Bot !**  A Nice Bot Developed By:`MHSTR`')
+        ebnklb.channel.send('My Prefix `$`')
 
     }
 });
