@@ -3300,12 +3300,12 @@ client.on('message', message => {
 	});
 
 	
-	client.on('message', msg => {
+  client.on('message', msg => {//msg
     if (msg.content === 'الوان') {
-      if (msg.channel.id !== "487244882298273824") return;
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/472743324084731914/478685035730305036/color.png"})
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/482379352122851329/487517308101853184/colors.png"})
     }
-  });
+  });;
+  
 client.on('message', message => {
           let args = message.content.split(' ').slice(1);
    if(message.content.split(' ')[0] == '-color'){
