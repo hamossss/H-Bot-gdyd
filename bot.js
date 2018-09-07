@@ -603,7 +603,7 @@ bot invite link: https://discordapp.com/oauth2/authorize?client_id=4816226085348
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "$games") {
+     if (message.content === prefix + "games") {
 		 message.channel.send('**تم ارسال اوامر الالعاب في الخاص**');
             
 	
