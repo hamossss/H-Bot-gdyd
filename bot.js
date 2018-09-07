@@ -3315,42 +3315,42 @@ const prefix = '+'
     }
   });
 client.on('message', message => {
-    let args = message.content.split(' ').slice(1);
-if(message.content.split(' ')[0] == 'لون'){
-if (message.channel.id !== "487244882298273824") return;
-     const embedd = new Discord.RichEmbed()
-.setFooter('Requested by '+message.author.username, message.author.avatarURL)
-.setDescription(`**There's No Color With This Number ** ❌ `)
-.setColor(`ff0000`)
+          let args = message.content.split(' ').slice(1);
+   if(message.content.split(' ')[0] == '-color'){
+           const embedd = new Discord.RichEmbed()
+     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
+   .setDescription(`**There's No Color With This Number ** :x: `)
+   .setColor(`ff0000`)
 
-if(!isNaN(args) && args.length > 0)
-
-
- var a = message.guild.roles.find("name",`${args}`)
-          if(!a)return;
-          if (a.name > 250 || a.name < 1) return;
-const embed = new Discord.RichEmbed()
-              
-.setFooter('Requested by '+message.author.username, message.author.avatarURL)
-.setDescription(`**Color Changed Successfully** ✅ `)
-
-.setColor(`${a.hexColor}`)
-message.channel.sendEmbed(embed);
-    if (!args)return;
-setInterval(function(){})
-            let count = 0;
-            let ecount = 0;
-  for(let x = 1; x < 201; x++){
-     
-      message.member.removeRole(message.guild.roles.find("name",`${x}`))
+    if(!isNaN(args) && args.length > 0)
     
-      }
-          message.member.addRole(message.guild.roles.find("name",`${args}`));
-  
-      
-}
-});
 
+if    (!(message.guild.roles.find("name",`${args}`))) return  message.channel.sendEmbed(embedd);
+
+
+       var a = message.guild.roles.find("name",`${args}`)
+                if(!a)return;
+const embed = new Discord.RichEmbed()
+                    
+     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
+   .setDescription(`**Color Changed To Successfully** :white_check_mark: `)
+ 
+   .setColor(`${a.hexColor}`)
+  message.channel.sendEmbed(embed);
+          if (!args)return;
+setInterval(function(){})
+                  let count = 0;
+                  let ecount = 0;
+        for(let x = 1; x < 201; x++){
+           
+            message.member.removeRole(message.guild.roles.find("name",`${x}`))
+          
+            }
+                message.member.addRole(message.guild.roles.find("name",`${args}`));
+        
+            
+    }
+});
 const cuttweet = [     'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',     'كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',     'كت تويت | الحرية لـ ... ؟',     'كت تويت | قناة الكرتون المفضلة في طفولتك؟',     'كت تويت ‏| كلمة للصُداع؟',     'كت تويت ‏| ما الشيء الذي يُفارقك؟',     'كت تويت ‏| ما الشيء الذي يُفارقك؟',     'كت تويت | ��وقف مميز فعلته مع شخص ولا يزال يذكره لك؟',     'كت تويت ‏| أيهما ينتصر، الكبرياء أم الحب؟',     'كت تويت | بعد ١٠ سنين ايش بتكون ؟',     'كت تويت ‏| مِن أغرب وأجمل الأسماء التي مرت عليك؟',     '‏كت تويت | عمرك شلت مصيبة عن ش��������ص برغبتك ؟',     'كت تويت | أكثر سؤال وجِّه إليك مؤخرًا؟',     '‏كت تويت | ما هو الشيء الذي يجعلك تشعر بالخوف؟',     '‏كت تويت | وش يفسد الصداقة؟',     '‏كت تويت | شخص لاترفض له طلبا ؟',     '‏كت تويت | كم مره خسرت شخص تحبه؟.',     '‏كت تويت | كيف تتعامل مع الاشخاص السلبيين ؟',     '‏كت تويت | كلمة تشعر بالخجل اذا قيلت لك؟',     '‏كت تويت | جسمك اكبر من عٌمرك او العكسّ ؟!',     '‏كت تويت |أقوى كذبة مشت عليك ؟',     '‏كت تويت | تتأثر بدموع شخص يبكي قدامك قبل تعرف السبب ؟',     'كت تويت | هل حدث وضحيت من أجل شخصٍ أحببت؟',     '‏كت تويت | أكثر تطبيق تستخدمه مؤخرًا؟',     '‏كت تويت | ‏اكثر شي يرضيك اذا زعلت بدون تفكير ؟',     '‏كت تويت | وش محتاج عشان تكون مبسوط ؟',     '‏كت تويت | مطلبك الوحيد الحين ؟',     '‏كت تويت | هل حدث وشعرت بأنك ارتكبت أحد الذنوب أثناء الصيام؟',];
  client.on('message', message => {
    if (message.content.startsWith(prefix + "كت تويت")) {
