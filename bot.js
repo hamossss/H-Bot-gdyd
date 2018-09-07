@@ -3301,14 +3301,14 @@ client.on('message', message => {
 
 	
   client.on('message', msg => {//msg
-    if (msg.content === 'الوان') {
+    if (msg.content === '$color ') {
       msg.channel.send({file : "https://cdn.discordapp.com/attachments/482379352122851329/487517308101853184/colors.png"})
     }
   });;
   
 client.on('message', message => {
           let args = message.content.split(' ').slice(1);
-   if(message.content.split(' ')[0] == '-color'){
+   if(message.content.split(' ')[0] == '$colors'){
            const embedd = new Discord.RichEmbed()
      .setFooter('Requested by '+message.author.username, message.author.avatarURL)
    .setDescription(`**There's No Color With This Number ** :x: `)
@@ -3325,7 +3325,7 @@ if    (!(message.guild.roles.find("name",`${args}`))) return  message.channel.se
 const embed = new Discord.RichEmbed()
                     
      .setFooter('Requested by '+message.author.username, message.author.avatarURL)
-   .setDescription(`**Color Changed To Successfully** :white_check_mark: `)
+   .setDescription(`**تم تغيير اللون بنجاح** :white_check_mark: `)
  
    .setColor(`${a.hexColor}`)
   message.channel.sendEmbed(embed);
