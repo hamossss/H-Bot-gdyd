@@ -3301,14 +3301,14 @@ client.on('message', message => {
 
 	
   client.on('message', msg => {//msg
-    if (msg.content === '$color ') {
+    if (msg.content === '$colors') {
       msg.channel.send({file : "https://cdn.discordapp.com/attachments/482379352122851329/487517308101853184/colors.png"})
     }
   });;
   
 client.on('message', message => {
           let args = message.content.split(' ').slice(1);
-   if(message.content.split(' ')[0] == '$colors'){
+   if(message.content.split(' ')[0] == '$color'){
            const embedd = new Discord.RichEmbed()
      .setFooter('Requested by '+message.author.username, message.author.avatarURL)
    .setDescription(`**There's No Color With This Number ** :x: `)
