@@ -450,7 +450,7 @@ $games ⥨ اوامر الالعاب
 $music ⥨ اوامر الموسيقى
 Other Commands :
 
-$invite ⥨ لدعوة البوت الى سيرفرك
+$inv ⥨ لدعوة البوت الى سيرفرك
 $support ⥨ لدخول سيرفر الدعم
  `)//by !S7Q | Boyka.#4141 'hbot SERVER'
    message.channel.sendEmbed(embed)
@@ -486,52 +486,81 @@ client.on('message', message => {
     }
 });
 
+
+
+client.on('message', msg => {
+  if (msg.author.bot) return;
+  if (!msg.content.startsWith(prefix)) return;
+  let command = msg.content.split(" ")[0];
+  command = command.slice(prefix.length);
+  let args = msg.content.split(" ").slice(1);
+
+    if(command === "clr") {
+        const emoji = client.emojis.find("name", "wastebasket")
+    let textxt = args.slice(0).join("");
+    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
+    if (textxt == "") {
+        msg.delete().then
+    msg.channel.send("***```Supply A Number 👌```***").then(m => m.delete(3000));
+} else {
+    msg.delete().then
+    msg.delete().then
+    msg.channel.bulkDelete(textxt);
+        msg.channel.send("```Cleard: " + textxt + "\n Messages```").then(m => m.delete(3000));
+        }    
+    }
+}
+});
+
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
-    let pages = [`
+    if (message.author.bot) return;
+     if (message.content === prefix + "music") {
+		 message.channel.send('**تم ارسال اوامر الموسيقى في الخاص**');
+            
+	
+		 
+
+
+ message.author.sendMessage(`
+
+        ***__Administrative Orders__***
 **
-:gem:  البوت فيه كثير ميزات حلوة و جميلة
- ا:rocket: البوت يعمل 24 ساعه 
-بوت يمتلك مضد جحفله و سبام و نشر روابط :gear: 
-**
-        ***__General orders__***
-**
-『${prefix}allbots/لعرض جميع البوتات الي بالسيرفر』
-『${prefix}server/يعرض لك معلومات عن السيرفر』
-『${prefix}bot/يعرض لك كل معلومات البوت』
-『${prefix}skin <name>/يعرض لك سكنك بماين كرافت』
-『${prefix}count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
-『${prefix}invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
-『${prefix}invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
-『${prefix}cal/اله حاسبة』
-『${prefix}trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
-『${prefix}short/يختصر لك رابط كبير الى رابط صغير』
-『${prefix}tag/يكتب لك الكلمة بشكل جميل وكبير』
-『${prefix}google/للبحث في قوقل عن طريق الدسكورد』
-『${prefix}perms/يعرض لك برمشناتك بالسيرفر』
-『${prefix}yn/تسأل بوت والبوت يجاوبك بنعم او لا』
-『${prefix}w/امر يخليك مثل بوت تكتب عبره مع امر ويسويك بوت』
-『${prefix}za5/يزخرف لك كلمة او جملة』
-『${prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
-『${prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
-『${prefix}emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
-『${prefix}say/يكرر الكلام الي تكتبو』
-『${prefix}image/صورة السيرفر』
-『${prefix}members/��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
-『${prefix}id/معلومات عنك』
-『${prefix}tc/انشاء روم مؤقت ويمكنك تحديد الاعدادات』
-『${prefix}bans / عدد الاشخاص المبندة 』
-『${prefix}voice /  يوم لك بكتابه مجموع عدد الاشخاص الموجودين برومات』
-『${prefix}avatar/صورتك او صورة الي تمنشنو』
-『${prefix}embed/يكرر الي تقولو بشكل حلو』
-『${prefix}discrim/كود يضهر لك الاشخاص نفس تاقك』
-『${prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
-『${prefix}inv/لدعوة البوت الى سيرفرك』
-『${prefix}support/سيرفر الدعم』
-『${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت』
-**
-  `
-,`
+        ***__Music orders__***
+
+**『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
+『${prefix}skip / لتجآوز الأغنية الحآلية』
+『${prefix}pause / إيقآف الأغنية مؤقتا』
+『${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا』
+『${prefix}vol / لتغيير درجة الصوت 100 - 0』
+『${prefix}stop / لإخرآج البوت من الروم』
+『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
+『${prefix}queue / لمعرفة قآئمة التشغيل』**
+==================================================================
+Server support: https://discord.gg/TFmRfzZ
+==================================================================
+bot invite link: https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot
+==================================================================
+`);
+
+    }
+});
+
+
+
+
+
+
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "admin") {
+		 message.channel.send('**تم ارسال اوامر الادمنية في الخاص**');
+            
+	
+		 
+
+
+ message.author.sendMessage(`
+
         ***__Administrative Orders__***
 **
 『${prefix}setwelcomer / ترحيب بي الروم ال تبي  』
@@ -560,19 +589,30 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『${prefix}cv <name> / انشاء رووم فويس』
 『${prefix}delet <name> / مسح الشات او الرووم فويس』
 『${prefix}ccolors <number> / ينشا لك الوان مع كم الوان تبي』**
-   `,`
-        ***__Music orders__***
+==================================================================
+Server support: https://discord.gg/TFmRfzZ
+==================================================================
+bot invite link: https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot
+==================================================================
+`);
 
-**『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
-『${prefix}skip / لتجآوز الأغنية الحآلية』
-『${prefix}pause / إيقآف الأغنية مؤقتا』
-『${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا』
-『${prefix}vol / لتغيير درجة الصوت 100 - 0』
-『${prefix}stop / لإخرآج البوت من الروم』
-『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
-『${prefix}queue / لمعرفة قآئمة التشغيل』**
+    }
+});
 
-        ***__Games orders__***
+
+
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "$games") {
+		 message.channel.send('**تم ارسال اوامر الالعاب في الخاص**');
+            
+	
+		 
+
+
+ message.author.sendMessage(`
+
+       ***__Games orders__***
  **       
 『${prefix}rps / حجر ورقة مقص』
 『${prefix}speed / اسرع كتابة』
@@ -589,80 +629,14 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 
 
 **
-   
-`]
-    let page = 1;
+==================================================================
+Server support: https://discord.gg/TFmRfzZ
+==================================================================
+bot invite link: https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot
+==================================================================
+`);
 
-    let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setFooter(`Page ${page} of ${pages.length}`)
-    .setDescription(pages[page-1])
-
-    message.author.sendEmbed(embed).then(msg => {
-
-        msg.react('◀').then( r => {
-            msg.react('▶')
-
-
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
-
-
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
-
-
-
-        backwards.on('collect', r => {
-            if (page === 1) return;
-            page--;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        forwards.on('collect', r => {
-            if (page === pages.length) return;
-      
-      page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        })
-    })
     }
-}); 
-client.on('message', message => {
-     if (message.content === (prefix + "help")) {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
-  message.channel.sendEmbed(embed);
-    }
-});
-client.on('message', msg => {
-  if (msg.author.bot) return;
-  if (!msg.content.startsWith(prefix)) return;
-  let command = msg.content.split(" ")[0];
-  command = command.slice(prefix.length);
-  let args = msg.content.split(" ").slice(1);
-
-    if(command === "clr") {
-        const emoji = client.emojis.find("name", "wastebasket")
-    let textxt = args.slice(0).join("");
-    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
-    if (textxt == "") {
-        msg.delete().then
-    msg.channel.send("***```Supply A Number 👌```***").then(m => m.delete(3000));
-} else {
-    msg.delete().then
-    msg.delete().then
-    msg.channel.bulkDelete(textxt);
-        msg.channel.send("```Cleard: " + textxt + "\n Messages```").then(m => m.delete(3000));
-        }    
-    }
-}
 });
 
 
@@ -720,11 +694,11 @@ client.on('message', message => {
 
 ==================================================================
 
-Server support: https://discord.gg/twdHNJT
+Server support: https://discord.gg/TFmRfzZ
 
 ==================================================================
 
-bot invite link: https://discordapp.com/oauth2/authorize?client_id=388700863893602304&scope=bot&permissions=0
+bot invite link: https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot
 
 ==================================================================
 
