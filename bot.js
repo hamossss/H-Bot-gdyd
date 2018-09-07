@@ -438,6 +438,26 @@ client.on('ebnklb',function(ebnklb) {
 });
 
 
+client.on("message", message => {
+ if (message.content === `${prefix}help`) {
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
+      .setDescription(`
+Help Commands: 
+$general ⥨ الاوامر العامة
+$admin ⥨ اوامر الادارة
+$games ⥨ اوامر الالعاب
+$music ⥨ اوامر الموسيقى
+Other Commands :
+
+$invite ⥨ لدعوة البوت الى سيرفرك
+$support ⥨ لدخول سيرفر الدعم
+ `)//by !S7Q | Boyka.#4141 'hbot SERVER'
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
+
 
 
 client.on('message', message => {
@@ -648,8 +668,8 @@ client.on('message', msg => {
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help-en") {
-		 message.channel.send('**The Message Was Sent On Private**');
+     if (message.content === prefix + "general") {
+		 message.channel.send('**تم ارسال الاوامر العامة في الخاص**');
             
 	
 		 
@@ -657,78 +677,46 @@ client.on('message', message => {
 
  message.author.sendMessage(`
  **
-__~~The King Bot~~__ By: Peery#0609
-╱╭╮╭╮╱╱╱╱╭╮╭━╮╱╱╱╱╱╱╭━━╮╱╱╱╭╮
-╭╯╰┫┃╱╱╱╱┃┃┃╭╯╱╱╱╱╱╱┃╭╮┃╱╱╭╯╰╮
-╰╮╭┫╰━┳━━┫╰╯╯╭┳━╮╭━━┫╰╯╰┳━┻╮╭╯
-╱┃┃┃╭╮┃┃━┫╭╮┃┣┫╭╮┫╭╮┃╭━╮┃╭╮┃┃
-╱┃╰┫┃┃┃┃━┫┃┃╰┫┃┃┃┃╰╯┃╰━╯┃╰╯┃╰╮
-╱╰━┻╯╰┻━━┻╯╰━┻┻╯╰┻━╮┣━━━┻━━┻━╯
-╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
-╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
-╔[❖════════════❖]╗
-             Prefix = ' * '
-╚[❖════════════❖]╝
-
-╔[❖════════════❖]╗
-             Admin Commands
-╚[❖════════════❖]╝
-
- ❖ *kick <mention > ➾ kick member from server
-
- ❖ *clear ➾ clear chat ( not ready yet fixing)
- 
- ❖ *mute < mention > ➾ mute member
-
- ❖ *unmute <mention> ➾ unmute member
-
- ❖ *ct <name> ➾ create channel
-
- ❖ *cv <name> create voice channel
-  
- ❖ *bc <message> ➾ message all members in server
-
-
-╔[❖════════════❖]╗
-            General  Commands
-╚[❖════════════❖]╝
-
-❖ *roll <number> ➾ role 
-
-❖ *date ➾ see date
-
-❖ *member ➾ members info
-
-❖ *ser-av ➾ server avatar
-
-❖ *uptime ➾ to see uptime
-
-❖ *invs ➾ server invite link
-
-❖ *own ➾ bot owner
-
-❖ *id ➾ your id
-
-❖ *avatar ➾ your avatar account
-
-❖ *help-en ➾ help by arabic
-
-❖ *help-en ➾ help by english
-
-❖ *ping ➾ to see ping
-
-❖ *bot ➾ bot informations 
-
-❖ *server ➾ server informations 
-
-❖ *invite ➾ bot invite link
-
-╔[❖════════════❖]╗
-                    Welcome
-╚[❖════════════❖]╝
-
-to enable welcome message do channel name "wlc"
-
+:gem:  البوت فيه كثير ميزات حلوة و جميلة
+ ا:rocket: البوت يعمل 24 ساعه 
+بوت يمتلك مضد جحفله و سبام و نشر روابط :gear: 
+**
+        ***__General orders__***
+**
+『${prefix}allbots/لعرض جميع البوتات الي بالسيرفر』
+『${prefix}server/يعرض لك معلومات عن السيرفر』
+『${prefix}bot/يعرض لك كل معلومات البوت』
+『${prefix}skin <name>/يعرض لك سكنك بماين كرافت』
+『${prefix}count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
+『${prefix}invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
+『${prefix}invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
+『${prefix}cal/اله حاسبة』
+『${prefix}trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
+『${prefix}short/يختصر لك رابط كبير الى رابط صغير』
+『${prefix}tag/يكتب لك الكلمة بشكل جميل وكبير』
+『${prefix}google/للبحث في قوقل عن طريق الدسكورد』
+『${prefix}perms/يعرض لك برمشناتك بالسيرفر』
+『${prefix}yn/تسأل بوت والبوت يجاوبك بنعم او لا』
+『${prefix}w/امر يخليك مثل بوت تكتب عبره مع امر ويسويك بوت』
+『${prefix}za5/يزخرف لك كلمة او جملة』
+『${prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
+『${prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
+『${prefix}emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
+『${prefix}say/يكرر الكلام الي تكتبو』
+『${prefix}image/صورة السيرفر』
+『${prefix}members/��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
+『${prefix}id/معلومات عنك』
+『${prefix}tc/انشاء روم مؤقت ويمكنك تحديد الاعدادات』
+『${prefix}bans / عدد الاشخاص المبندة 』
+『${prefix}voice /  يوم لك بكتابه مجموع عدد الاشخاص الموجودين برومات』
+『${prefix}avatar/صورتك او صورة الي تمنشنو』
+『${prefix}embed/يكرر الي تقولو بشكل حلو』
+『${prefix}discrim/كود يضهر لك الاشخاص نفس تاقك』
+『${prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
+『${prefix}inv/لدعوة البوت الى سيرفرك』
+『${prefix}support/سيرفر الدعم』
+『${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت』
+**
 
 ==================================================================
 
