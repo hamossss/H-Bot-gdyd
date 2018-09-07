@@ -528,12 +528,19 @@ client.on('message', message => {
         ***__Music orders__***
 
 **『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
+
 『${prefix}skip / لتجآوز الأغنية الحآلية』
+
 『${prefix}pause / إيقآف الأغنية مؤقتا』
+
 『${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا』
+
 『${prefix}vol / لتغيير درجة الصوت 100 - 0』
+
 『${prefix}stop / لإخرآج البوت من الروم』
+
 『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
+
 『${prefix}queue / لمعرفة قآئمة التشغيل』**
 ==================================================================
 Server support: https://discord.gg/TFmRfzZ
@@ -564,31 +571,67 @@ client.on('message', message => {
         ***__Administrative Orders__***
 **
 『${prefix}setwelcomer / ترحيب بي الروم ال تبي  』
+
 『${prefix}Move @user /  لسحب الشخص الى روومك』
+
 『${prefix}voiceonline /  لتفعيل خاصيه فويس اونلاين يسحب عدد الاشخاص موجودين برومات』
+
 『${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر』
+
 『${prefix}bcrole / لارسال رساله جماعي لرتبه محدده يجب تمنشنها 』
+
 『${prefix}role @user <rank> / لأعطاء رتبة لعضو معين』
+
 『${prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين』
+
 『${prefix}role all <rank> / لأعطاء رتبة للجميع』
+
 『${prefix}role humans <rank> / لأعطاء رتبة للاشخاص فقط』
+
 『${prefix}role bots <rank> / لأعطاء رتبة لجميع البوتات』
+
 『${prefix}hchannel / اخفاء الشات』
+
 『${prefix}schannel / اضهار الشات المخفية』
+
 『${prefix}clr <numbr> / مسح الشات بعدد』
+
 『${prefix}clear / مسح الشات』
+
 『${prefix}mute @user <reason> / اعطاء العضو ميوت لازم رتبة <Muted>』
+
 『${prefix}unmute @user / لفك الميوت عن الشخص 』
+
 『${prefix}kick @user <reason> / طرد الشخص من السيرفر』
+
 『${prefix}ban @user <reason> / حضر الشخص من السيرفر』
+
 『${prefix}mutechannel / تقفيل الشات』
+
 『${prefix}unmutechannel / فتح الشات』
+
 『${prefix}dc / مسح كل الرومات』
+
 『${prefix}dr / <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات』
+
 『${prefix}ct <name> / انشاء شات』
+
 『${prefix}cv <name> / انشاء رووم فويس』
+
 『${prefix}delet <name> / مسح الشات او الرووم فويس』
-『${prefix}ccolors <number> / ينشا لك الوان مع كم الوان تبي』**
+
+『${prefix}cr-colors / لانشاء 50 لون متناسق』
+
+『${prefix}del-colors / لحذف 50 لون』
+
+『${prefix}colors / لعرض قائمة الالوان』
+
+『${prefix}color / لاختيار لون』
+
+
+
+
+**
 ==================================================================
 Server support: https://discord.gg/TFmRfzZ
 ==================================================================
@@ -615,16 +658,27 @@ client.on('message', message => {
        ***__Games orders__***
  **       
 『${prefix}rps / حجر ورقة مقص』
+
 『${prefix}speed / اسرع كتابة』
+
 『${prefix}quas / اسئلة عامة』
+
 『${prefix}نكت / نكت 』
+
 『${prefix}لعبة فكك / فكك』
+
 『${prefix}عواصم عشوائي/عواصم』
+
 『${prefix}لعبة كت تويت / كت تويت』
+
 『${prefix}roll <number> / قرعة』
+
 『${prefix}لو خيروك بطريقة حلوة / لو خيروك』
+
 『${prefix}لعبة مريم / مريم』
+
 『${prefix}فوائد ونصائح  / هل تعلم』
+
 『${prefix}يعطيك عقابات قاسية / عقاب 』
 
 
@@ -658,36 +712,67 @@ client.on('message', message => {
         ***__General orders__***
 **
 『${prefix}allbots/لعرض جميع البوتات الي بالسيرفر』
+
 『${prefix}server/يعرض لك معلومات عن السيرفر』
+
 『${prefix}bot/يعرض لك كل معلومات البوت』
+
 『${prefix}skin <name>/يعرض لك سكنك بماين كرافت』
+
 『${prefix}count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
+
 『${prefix}invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
+
 『${prefix}invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
+
 『${prefix}cal/اله حاسبة』
+
 『${prefix}trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
+
 『${prefix}short/يختصر لك رابط كبير الى رابط صغير』
+
 『${prefix}tag/يكتب لك الكلمة بشكل جميل وكبير』
+
 『${prefix}google/للبحث في قوقل عن طريق الدسكورد』
+
 『${prefix}perms/يعرض لك برمشناتك بالسيرفر』
+
 『${prefix}yn/تسأل بوت والبوت يجاوبك بنعم او لا』
+
 『${prefix}w/امر يخليك مثل بوت تكتب عبره مع امر ويسويك بوت』
+
 『${prefix}za5/يزخرف لك كلمة او جملة』
+
 『${prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
+
 『${prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
+
 『${prefix}emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
+
 『${prefix}say/يكرر الكلام الي تكتبو』
+
 『${prefix}image/صورة السيرفر』
+
 『${prefix}members/��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
+
 『${prefix}id/معلومات عنك』
+
 『${prefix}tc/انشاء روم مؤقت ويمكنك تحديد الاعدادات』
+
 『${prefix}bans / عدد الاشخاص المبندة 』
+
 『${prefix}avatar/صورتك او صورة الي تمنشنو』
+
 『${prefix}embed/يكرر الي تقولو بشكل حلو』
+
 『${prefix}discrim/كود يضهر لك الاشخاص نفس تاقك』
+
 『${prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
+
 『${prefix}inv/لدعوة البوت الى سيرفرك』
+
 『${prefix}support/سيرفر الدعم』
+
 『${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت』
 **
 
