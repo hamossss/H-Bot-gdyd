@@ -1305,7 +1305,6 @@ client.on('message',function(message) {
        if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return message.channel.send(':information_source: **Error:** ``خصائص مفقودة``');
        if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.channel.send(':information_source: **Error:** ``خصائص مفقودة مني``');
        if(!muteMember) return message.channel.send(':information_source: **Error:** ``منشن شخص``');
-       if(!muteReason) return message.channel.send(':information_source: **Error:** ``حدد سباّ``');
        if(!muteDuration) return message.channel.send(':information_source: **Error:** ``حدد وقت زمني``');
        if(!muteDuration.match(/[1-7][s,m,h,d,w]/g)) return message.channel.send(':information_source: **Error:** ``حدد وقت زمني صحيح``');
        message.channel.send(`:white_check_mark: **تم اعطاء العضو ميوت : ${muteMember}**`);
