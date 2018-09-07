@@ -586,7 +586,7 @@ client.on('message', message => {
 **
 『${prefix}setwelcomer / ترحيب بي الروم ال تبي  』
 
-『${prefix}Moveall /  لسحب الشخص الى روومك』
+『${prefix}Moveall /  لسحب جميع الاعضاء الي رومك』
 
 『${prefix}voiceonline /  لتفعيل خاصيه فويس اونلاين يسحب عدد الاشخاص موجودين برومات』
 
@@ -1293,30 +1293,7 @@ return;
 });
 
 
-const mmss = require('ms');
-client.on('message',function(message) {
-    let messageArray = message.content.split(' ');
-    let muteRole = message.guild.roles.get('459361628136275989') || message.guild.roles.find('name', 'Muted');
-    let muteMember = message.mentions.members.first();
-    let muteReason = messageArray[2];
-    let muteDuration = messageArray[3];
-   if(message.content.startsWith(prefix + "ute")) {
-       if(!muteRole) return message.guild.createRole({name: 'Muted'}).then(message.guild.channels.forEach(chan => chan.overwritePermissions(muteRole, {SEND_MESSAGES:false,ADD_REACTIONS:false})));
-       if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return message.channel.send(':information_source: **Error:** ``خصائص مفقودة``');
-       if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.channel.send(':information_source: **Error:** ``خصائص مفقودة مني``');
-       if(!muteMember) return message.channel.send(':information_source: **Error:** ``منشن شخص``');
-       if(!muteDuration) return message.channel.send(':information_source: **Error:** ``حدد وقت زمني``');
-       if(!muteDuration.match(/[1-7][s,m,h,d,w]/g)) return message.channel.send(':information_source: **Error:** ``حدد وقت زمني صحيح``');
-       message.channel.send(`:white_check_mark: **تم اعطاء العضو ميوت : ${muteMember}**`);
-       muteMember.addRole(muteRole);
-       muteMember.setMute(true)
-       .then(() => { setTimeout(() => {
-           muteMember.removeRole(muteRole)
-           muteMember.setMute(false)
-       }, mmss(muteDuration));
-       });
-   } 
-});
+
 
 
 
