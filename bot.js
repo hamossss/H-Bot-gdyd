@@ -69,7 +69,72 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
  }
 });
 
+client.on('message', message => {
+            if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('$bcall')){
+ if (message.author.id !== '466425075487342615') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+ if(!message.author.id === '466425075487342615') return;
+message.channel.sendMessage('جار ارسال الرسالة |✅')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
 
+
+client.on('guildCreate', guild => {
+  client.channels.get("488249121786953728").send(`:white_check_mark: **تم اضافة البوت في سيرفر جديد مبروكك
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**`)
+});
+client.on('guildDelete', guild => {
+  client.channels.get("488249205211660289").send(`:negative_squared_cross_mark: **طردوني حرام والله ايش سويت انا
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**`)
+});
+
+
+  client.on('message', msg => {//msg
+    if (msg.content === '$support') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/487245555785924629/488247808747634699/1535141472722.png"})
+    }
+  });;
+
+
+  client.on('message', msg => {//msg
+    if (msg.content === '$general') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/487245555785924629/488247808747634699/1535141472722.png"})
+    }
+  });;
+
+  client.on('message', msg => {//msg
+    if (msg.content === '$admin') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/487245555785924629/488247808747634699/1535141472722.png"})
+    }
+  });;
+  client.on('message', msg => {//msg
+    if (msg.content === '$games') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/487245555785924629/488247808747634699/1535141472722.png"})
+    }
+  });;
+
+
+  client.on('message', msg => {//msg
+    if (msg.content === '$music') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/487245555785924629/488247808747634699/1535141472722.png"})
+    }
+  });;
+
+client.on('message', msg => {//msg
+    if (msg.content === 'السلام عليكم') {
+      msg.channel.send({file : "https://cdn.discordapp.com/attachments/477438358902276099/478177205164310529/004ca53f54b2ff2c.png"})
+    }
+  });;
 
         client.on('message', async message => {
             if(message.content.includes('discord.gg')){
@@ -537,7 +602,7 @@ client.on('message', message => {
 
  message.author.sendMessage(`
 
-        ***__Administrative Orders__***
+
 **
         ***__Music orders__***
 
@@ -555,7 +620,8 @@ client.on('message', message => {
 
 『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
 
-『${prefix}queue / لمعرفة قآئمة التشغيل』**
+『${prefix}queue / لمعرفة قآئمة التشغيل』
+**
 ==================================================================
 Server support: https://discord.gg/TFmRfzZ
 ==================================================================
@@ -3870,7 +3936,7 @@ client.on("guildMemberAdd", member => {
       var Canvas = require('canvas')
       var jimp = require('jimp')
       
-      const w = ['hbot.png'];
+      const w = ['hbot3.png'];
       
               let Image = Canvas.Image,
                   canvas = new Canvas(557, 241),
