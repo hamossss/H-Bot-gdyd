@@ -112,11 +112,6 @@ Server Count: __${guild.memberCount}__**`)
 });
 
 
-  client.on('message', msg => {//msg
-    if (msg.content === '$support') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/487245555785924629/488247808747634699/1535141472722.png"})
-    }
-  });;
 
 
   client.on('message', msg => {//msg
