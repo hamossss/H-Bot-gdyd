@@ -980,21 +980,7 @@ console.log('[38ab] Send By: ' + message.author.username)
   }
 });
 
-client.on('message', ra3d => {
-                        let args = ra3d.content.split(" ").slice(1).join(" ")
-if(ra3d.content.startsWith(prefix + 'ccolors')) {
-    if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
-             if (!ra3d.member.hasPermission('MANAGE_ROLES')) return ra3d.channel.sendMessage('`**⚠ | `[MANAGE_ROLES]` لا يوجد لديك صلاحية**'); 
-              ra3d.channel.send(`**✅ |Created __${args}__ Colors**`);
-                  setInterval(function(){})
-                    let count = 0;
-                    let ecount = 0;
-          for(let x = 1; x < `${parseInt(args)+1}`; x++){
-            ra3d.guild.createRole({name:x,
-              color: 'RANDOM'})
-              }
-            }
-       });
+
 
 client.on('message', message => {
 var cats = ["http://www.shuuf.com/shof/uploads/2015/09/09/jpg/shof_b9d73150f90a594.jpg","https://haltaalam.info/wp-content/uploads/2015/05/0.208.png","https://haltaalam.info/wp-content/uploads/2015/05/266.png","https://haltaalam.info/wp-content/uploads/2015/05/250.png","https://haltaalam.info/wp-content/uploads/2017/02/0.2517.png","https://pbs.twimg.com/media/CP0mi02UAAA3U2z.png","http://www.shuuf.com/shof/uploads/2015/08/31/jpg/shof_3b74fa7295ec445.jpg","http://www.shuuf.com/shof/uploads/2015/08/22/jpg/shof_fa3be6ab68fb415.jpg","https://pbs.twimg.com/media/CSWPvmRUcAAeZbt.png","https://pbs.twimg.com/media/B18VworIcAIMGsE.png"]
@@ -1239,7 +1225,6 @@ var heroo = new Discord.RichEmbed()
 .setColor('#6a109d')
 .setTimestamp(new Date())
 .setThumbnail(client.user.avatarURL)
-.setTitle('H Bot Info')
 .setURL('https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot')
 .setAuthor(client.user.username,client.user.avatarURL)
 .addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
@@ -1258,17 +1243,7 @@ var heroo = new Discord.RichEmbed()
   });
 }
 });
-client.on("message", message => {
-    if (!message.content.startsWith(prefix)) return;
-      let command = message.content.split(" ")[0];
-      command = command.slice(prefix.length);
-        if(command === "skin") {
-                const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
-    message.channel.send(image)
-        }
-    });
+
 
 
 
@@ -3798,17 +3773,7 @@ client.on('message', message => {
 });
 
 
-   client.on('message', message => {
-     if (message.content === "$support") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/TFmRfzZ**")
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
+
 client.on('message', omar => {
 if(omar.content.split(' ')[0] == prefix + 'dc') {  // delete all channels
 if (!omar.channel.guild) return;
